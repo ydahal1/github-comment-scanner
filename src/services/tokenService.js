@@ -6,13 +6,14 @@ class TokenService {
     // Make sure auth header/access token is present
     const authorizationHeader = headers.authorization;
     if (!authorizationHeader) throw ApiError.unauthorized();
+
     const accessToken = authorizationHeader.split(" ")[1];
     if (!accessToken) throw ApiError.unauthorized();
 
     //Decoding base64 string - Postman sends creds base64 encoded
     var buf = Buffer.from(accessToken, "base64");
     let decodedString = buf.toString("utf8");
-    const creds = decodedString.split(":");
+    const creds = decodedString.split(":"); // username:accesstoken
     return creds;
   }
 }
