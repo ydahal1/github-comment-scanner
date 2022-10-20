@@ -13,7 +13,6 @@ class TokenService {
     var buf = Buffer.from(accessToken, "base64");
     let decodedString = buf.toString("utf8");
     const creds = decodedString.split(":");
-
     return creds;
   }
 }
