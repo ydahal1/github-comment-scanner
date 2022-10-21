@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "npm run test",
-    "run": "node app.js"
+    "run": "node app.js",
+    "lint": "eslint ./src --ext .js"
   },
   "author": "Yadhap Dahal",
   "license": "ISC",
@@ -16,5 +17,12 @@
     "morgan": "^1.10.0",
     "octokit": "^2.0.9",
     "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.26.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.1.1"
   }
 }
