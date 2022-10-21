@@ -78,6 +78,7 @@ class GithubController {
         res.status(200).json({ message: "success" });
       } else {
         res.status(404).json({ message: "No image found on  this issue" });
+        next(ApiError.notFound());
       }
     } catch (error) {
       logger.error(error);

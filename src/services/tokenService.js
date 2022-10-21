@@ -11,8 +11,8 @@ class TokenService {
     if (!accessToken) throw ApiError.unauthorized();
 
     //Decoding base64 string - Postman sends creds base64 encoded
-    var buf = Buffer.from(accessToken, "base64");
-    let decodedString = buf.toString("utf8");
+    const buf = Buffer.from(accessToken, "base64");
+    const decodedString = buf.toString("utf8");
     const creds = decodedString.split(":"); // username:accesstoken
     return creds;
   }
