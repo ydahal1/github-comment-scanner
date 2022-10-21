@@ -18,17 +18,14 @@ const validate = (inputs) => {
 
 // Get comment params
 const getCommentParams = [
-  param("owner").exists().isString().withMessage("Invalid owner"),
-  param("repo").exists().isString().withMessage("repo"),
-  param("issue_number")
-    .exists()
-    .isNumeric()
-    .withMessage("Invalid issue number"),
+  param("owner").exists().isString().trim().escape().withMessage("Invalid owner"),
+  param("repo").exists().isString().trim().escape().withMessage("repo"),
+  param("issue_number").exists().isNumeric().trim().escape().withMessage("Invalid issue number"),
 ];
 
 // Post comment body
 const postCommentBody = [
-  body("body").exists().isString().withMessage("Invalid comment"),
+  body("body").not().isEmpty().trim().escape().withMessage("Invalid comment"),
 ];
 
 module.exports = {

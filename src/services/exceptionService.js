@@ -22,8 +22,8 @@ class ApiError extends Error {
   }
 
   // Other unknown errors or caught exceptions
-  static badRequest(status, message) {
-    return new ApiError(status, message);
+  static badRequest(message) {
+    return new ApiError(500, message);
   }
 }
 
