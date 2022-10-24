@@ -16,7 +16,7 @@ class GithubController {
       res.status(200).json(data)
     } catch (error) {
       logger.error(error)
-      return next(ApiError.badRequest(error.message))
+      return next(ApiError.badRequest(error.status, error.message))
     }
   }
 

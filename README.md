@@ -4,8 +4,11 @@
 1. Clone repo
 2. Install dependencies in the root
 3. Default port for app is 3000, if default port is not available follow step 4
-4. Create.env file in root. Copy and paste content from .env.sample amd update port number
-5. To spin the app - run nodemon app.js
+4. Create.env file in root use .env.sample as template and update port variable
+5. To spin the app - run nodemon server.js
+6. To run tests follow steps 7 and 8
+7. Create .env.test.js file inside .tests directory. Use sample.env.test for sample.Update your Github username and token
+8. Run npm test to start test
 ```
 
 #### Note

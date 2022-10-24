@@ -9,6 +9,25 @@
     "sourceType": "module"
   },
   "rules": {
-    "camelcase": ["error", { "allow": ["issue_number"] }]
-  }
+    "camelcase": ["error", { "allow": ["issue_number"] }],
+    "max-len": ["error", 100, 2, {
+      "ignoreUrls": true,
+      "ignoreComments": false,
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": false,
+      "ignoreTemplateLiterals": false,
+      }],
+  },
+    "overrides": [
+      {
+        "files": [
+          "**/*.test.js",
+          "**/*.test.jsx"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  
 }
