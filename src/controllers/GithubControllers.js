@@ -28,7 +28,7 @@ class GithubController {
       const gh = new Github(req.token)
 
       const { body } = await gh.getIssueById({ owner, repo, issue_number })
-      const { error, result } = ImageService.doesImgExist(body)
+      const { error, result } = ImageService.doesImgExist(body || '')
       if (error) {
         logger.error(error)
         return next(ApiError.badRequest(error.message))
@@ -68,7 +68,7 @@ class GithubController {
       const gh = new Github(token)
 
       const { body } = await gh.getIssueById({ owner, repo, issue_number })
-      const { error, result } = ImageService.doesImgExist(body)
+      const { error, result } = ImageService.doesImgExist(body || '')
       if (error) {
         return next(ApiError.badRequest(error.message))
       }
