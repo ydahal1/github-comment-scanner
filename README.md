@@ -5,10 +5,11 @@
 2. Install dependencies in the root
 3. Default port for app is 3000, if default port is not available follow step 4
 4. Create.env file in root. Copy and paste content from .env.sample amd update port number
-5. To spin the app - run node app.js or nodemon app.js if nodemon is installed on your machine
+5. To spin the app - run nodemon app.js
 ```
 
-#### Note 
+#### Note
+
 > All routes except "/health" are protected by BasicAuth. Provide your Github username and personal token to access protected routes.
 
 ![basic auth post man](basicAuthPostman.PNG)
@@ -20,9 +21,9 @@ HAPPY PATHS
 1. Health Check - localhost:3000/health
 2. Get Issue info - localhost:3000/api/v1/github/ydahal1/nginxtest/issue/1
 3. Add comment  - localhost:3000/api/v1/github/ydahal1/nginxtest/issues/1/comment
-                  {"body" : "I found an image in your issue at {date} {time}"}
+                  {"body" : "Comment posted from github comment scanner app"}
 4. Identify if issue has image and comment - localhost:3000/api/v1/github/ydahal1/nginxtest/issues/3/identify
-                  {"body" : "I found an image in your issue at {date} {time}"
+                  {"body" : "I found an image in your issue at {date} {time}"}
 ```
 
 ```
