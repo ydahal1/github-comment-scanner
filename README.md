@@ -7,8 +7,8 @@
 4. Create.env file in root use .env.sample as template and update port variable
 5. To spin the app - run nodemon server.js
 6. To run tests follow steps 7 and 8
-7. Create .env.test.js file inside .tests directory. Use sample.env.test for sample.Update your Github username and token
-8. Run npm test to start test
+7. Create .env.test.js file inside .tests directory. Use sample.env.test for sample.
+8. Update your Github username and token and run npm test to start test
 ```
 
 #### Note
